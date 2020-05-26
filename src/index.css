@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+  font: 14px "Century Gothic", Futura, sans-serif;
+}
+
+body {
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+/* ||||||||||||| BOARD ||||||||||||| */
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+/* ||||||||||||| SQUARES ||||||||||||| */
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  line-height: 34px;
+  height: 34px;
+  padding: 0;
+  text-align: center;
+  width: 40px;
+  font-size: 1.2em;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+/* ||||||||||||| GAME ||||||||||||| */
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
