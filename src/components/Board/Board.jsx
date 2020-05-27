@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
-// import ReactDOM from 'react-dom';
 
 import Squares from '../Squares/Squares.jsx';
 
+import './Board.css';
+
 class Board extends Component {
+
   renderSquare(i) {
-    return <Squares value={i} />;
+    return (
+      <Squares
+        value={this.props.squares[i]}
+        onClick={() => this.props.onClick(i)}
+      />
+    );
   }
 
   render() {
-    const status = 'Next player: X';
-
     return (
       <div>
-        <div className="status">{status}</div>
+        <div>
+          {/* Table Headers here */}
+        </div>
         <div className="board-row">
           {this.renderSquare(1)}
           {this.renderSquare(2)}

@@ -1,0 +1,20 @@
+/* ||||||||||||| SQUARES ||||||||||||| */
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  line-height: 34px;
+  height: 34px;
+  padding: 0;
+  text-align: center;
+  width: 40px;
+  font-size: 1.2em;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
