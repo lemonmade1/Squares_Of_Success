@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
-import { 
-  Link,   
+
+import {
+  BrowserRouter as Router,
+  Link,
+  Route,
 } from 'react-router-dom';
+
+import About from '../About/About';
+import Game from '../Game/Game';
+import Home from '../Home/Home';
 
 import './NavBar.css';
 
@@ -11,11 +18,17 @@ class NavBar extends Component {
       <div className="NavBar-App">
         <h1>SQUARES OF SUCCESS</h1>
 
-        <nav className="navbar">
-          <Link to='/'>HOME</Link>
-          <Link to='/game'>GAME</Link>
-          <Link to='/about'>ABOUT</Link>
-        </nav>
+        <Router>
+          <nav className="navbar">
+            <Link to='/'>HOME</Link>
+            <Link to='/game'>GAME</Link>
+            <Link to='/about'>ABOUT</Link>
+          </nav>
+          <Route path='/' component={Home} exact />
+          <Route path='/game' component={Game} />
+          <Route path='/about' component={About} />
+        </Router> 
+
       </div>
     )
   }
