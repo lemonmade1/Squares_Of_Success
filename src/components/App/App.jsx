@@ -3,6 +3,7 @@ import React from 'react';
 import NavBar from '../NavBar/NavBar';
 import Footer from '../Footer/Footer';
 
+
 import './App.css';
 
 function App() {
@@ -14,7 +15,6 @@ function App() {
 
         <Footer />
       </div>
-   
   );
 }
 
