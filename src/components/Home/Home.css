@@ -1,6 +1,6 @@
 #card_fan, #card_fan img {
-  width: 640px;
-  height: 480px;
+  width: 200px;
+  height: 300px;
   transition: .6s transform ease-out;
 }
 
@@ -8,18 +8,26 @@
   margin: 0 auto;
 }
 
-#card_fan {
+#card_fan img {
   border: 32px solid #ffe;
   box-shadow: 12px 12px 10px rgba(0,0,0,0.2);
   position: absolute;
   transform-origin: center 1200px;
 }
 
-#card_fan:hover img:last-child {
-  transform: rotate(24deg)
+#card_fan:hover #card1 {
+  transform: rotate(16deg)
 }
 
-#card_fan:hover img:first-child {
-  transform: rotate(-24deg)
+#card_fan:hover #card2 {
+  transform: rotate(8deg)
+}
+
+#card_fan:hover #card4 {
+  transform: rotate(-8deg)
+}
+
+#card_fan:hover #card5 {
+  transform: rotate(-16deg)
 }
 
