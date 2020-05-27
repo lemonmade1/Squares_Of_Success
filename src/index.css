@@ -1,11 +1,62 @@
-* {
-  box-sizing: border-box;
-  font: 14px "Century Gothic", Futura, sans-serif;
+/* 
+  http://meyerweb.com/eric/tools/css/reset/ 
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, p, img, ol, ul, li, table,
+tbody, thead, tr, th, td, footer, header {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 
 body {
-  margin: 0;
-  
+	line-height: 1;
+}
+
+ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ||||||||||||| END RESET ||||||||||||| */
+
+* {
+  box-sizing: border-box;
+  font-family: "Century Gothic", Futura, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  padding: 1em;
 }
 
 ol, ul {
@@ -13,22 +64,11 @@ ol, ul {
 }
 
 #root {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* ||||||||||||| GAME ||||||||||||| */
 
-.container {
-  width: 100%;
-}
-
-.game {
-  display: flex;
-  flex-direction: row;
-}
-
-.game-info {
-  margin-left: 20px;
-}

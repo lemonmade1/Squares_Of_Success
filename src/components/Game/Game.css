@@ -1,0 +1,14 @@
+/* ||||||||||||| GAME ||||||||||||| */
+
+.container {
+  width: 100%;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Board from '../Board/Board';
 
+import './Game.css';
+
 function boardComplete(squares) {
 
   const lines = [

@@ -1,0 +1,11 @@
+.NavBar-App {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  width: 220px;
+  display: flex;
+  justify-content: space-evenly;
+}

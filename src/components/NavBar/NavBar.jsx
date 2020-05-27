@@ -11,7 +11,7 @@ class NavBar extends Component {
       <div className="NavBar-App">
         <h1>SQUARES OF SUCCESS</h1>
 
-        <nav>
+        <nav className="navbar">
           <Link to='/'>HOME</Link>
           <Link to='/game'>GAME</Link>
           <Link to='/about'>ABOUT</Link>

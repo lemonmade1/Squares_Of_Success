@@ -4,12 +4,12 @@ import {
   Route,   
 } from 'react-router-dom';
 
-import './App.css';
-
 import About from '../About/About';
-import Home from '../Home/Home';
 import Game from '../Game/Game';
+import Home from '../Home/Home';
 import NavBar from '../NavBar/NavBar';
+
+import './App.css';
 
 function App() {
 
