@@ -9,6 +9,8 @@ import {
 import About from '../About/About';
 import Game from '../Game/Game';
 import Home from '../Home/Home';
+import LoginPage from '../LoginPage/LoginPage';
+import SignupPage from '../SignupPage/SignupPage';
 
 import './NavBar.css';
 
@@ -27,12 +29,13 @@ class NavBar extends Component {
           <Route path='/' component={Home} exact />
           <Route path='/game' component={Game} />
           <Route path='/about' component={About} />
-        </Router> 
+          <Route path='/login' component={LoginPage} />
+          <Route path='/signup' component={SignupPage} />
+        </Router>
 
       </div>
     )
   }
-
 }
 
 export default NavBar;
