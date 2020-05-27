@@ -1,0 +1,25 @@
+#card_fan, #card_fan img {
+  width: 640px;
+  height: 480px;
+  transition: .6s transform ease-out;
+}
+
+#card_fan {
+  margin: 0 auto;
+}
+
+#card_fan {
+  border: 32px solid #ffe;
+  box-shadow: 12px 12px 10px rgba(0,0,0,0.2);
+  position: absolute;
+  transform-origin: center 1200px;
+}
+
+#card_fan:hover img:last-child {
+  transform: rotate(24deg)
+}
+
+#card_fan:hover img:first-child {
+  transform: rotate(-24deg)
+}
+

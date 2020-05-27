@@ -34,19 +34,16 @@ function boardComplete(squares) {
 
 class Game extends Component {
 
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      history: [
-        {
-          squares: Array(100).fill(null),
-        }
-      ],
-      stepNum: 0,
-      xIsNext: true,
-    }
+  state = {
+    history: [
+      {
+        squares: Array(100).fill(null),
+      }
+    ],
+    stepNum: 0,
+    xIsNext: true,
   }
+
 
   handleClick(i) {
 
