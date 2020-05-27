@@ -1,3 +1,7 @@
+#base {
+  background: #234;
+}
+
 dl#gallery {
   position: relative;
 }
