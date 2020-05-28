@@ -22,28 +22,28 @@ const userSchema = new mongoose.Schema(
 userSchema.set("toJSON", {
   transform: function (doc, ret) {
 
-    // remove the password property when serializing doc to JSON
+    // REMOVE PW WHEN SERIALIZED TO JSON
     delete ret.password;
     return ret;
   },
 });
 
-userSchema.pre("save", function(next) {
+userSchema.pre("save", function (next) {
   const user = this;
   if (!user.isModified("password")) return next();
 
-  // password has been changed - salt and hash it
+  // WHEN PW CHANGE - SALT AND HASH IT
   bcrypt.hash(user.password, SALT_ROUNDS, function (err, hash) {
     if (err) return next(err);
 
-    // replace the user provided password with the hash
+    // REPLACE USER PROVIDED PW WITH HASH
     user.password = hash;
     next();
   });
 });
 
-userSchema.methods.comparePassword = (tryPassword, cb) => {
-  bcrypt.compare(tryPassword, this.password, (err, isMatch) => {
+userSchema.methods.comparePassword = function(tryPassword, cb) {
+  bcrypt.compare(tryPassword, this.password, function(err, isMatch) {
     if (err) return cb(err);
     cb(null, isMatch);
   });

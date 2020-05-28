@@ -1,11 +1,13 @@
 import React from 'react';
 
+import NavBar from '/Users/terrelllemons/Desktop/student/squares_of_success/src/components/NavBar/NavBar.jsx'
+
 import './Home.css';
 
-const Home = () => {
+const Home = (props) => {
   return (
     <div className='Home-App'>
-      <h1>HOME PAGE</h1>
+      <NavBar user={props.user} handleLogout={props.handleLogout} />
 
       <div id="card_fan">
         <img id="card1" src="./images/pix1.png" alt="Card 1" />

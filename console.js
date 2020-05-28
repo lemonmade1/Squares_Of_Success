@@ -1,10 +1,10 @@
 require("dotenv").config();
 
 // Let's us create our own node console/repl and prompt for JS code:
-var repl = require("repl");
+let repl = require("repl");
 
 // Start REPL and provide custom prompt :)
-var replServer = repl.start({
+let replServer = repl.start({
   prompt: "Node Console> ",
 });
 
@@ -13,9 +13,11 @@ require("./config/database");
 
 // Load up our models:
 const User = require("./models/user");
-const Score = require("./models/score");
+// const Score = require("./models/score");
+
 replServer.context.User = User;
-replServer.context.Score = Score;
+// replServer.context.Score = Score;
+
 console.log("\n");
 console.log("========================================");
 console.log(

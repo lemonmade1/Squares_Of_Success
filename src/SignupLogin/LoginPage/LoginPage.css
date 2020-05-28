@@ -1,7 +1,16 @@
 .LoginPage {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-  } 
+  height: 400px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-group {
+  margin: 1em;
+}
+
+.btn.btn-default {
+  border-radius: 0;
+  height: 2em;
+}

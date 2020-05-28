@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^7.2.1",
     "bcrypt": "^4.0.1",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.16",
     "morgan": "^1.10.0",
@@ -16,13 +17,16 @@
     "react-player": "^2.1.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "typescript": "^3.9.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build",
+    "console": "node console.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +42,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  }, 
+  "proxy": "http://localhost:3001"
 }
