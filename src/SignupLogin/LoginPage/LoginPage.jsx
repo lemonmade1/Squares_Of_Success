@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+
 import './LoginPage.css';
+
+import userService from '../../utils/userService';
 
 class LoginPage extends Component {
 
@@ -10,11 +13,29 @@ class LoginPage extends Component {
   };
 
   handleChange = (e) => {
-    // TODO: implement in an elegant way
+    this.setState({
+      [e.target.name]: e.target.value
+    });
   }
 
-  handleSubmit = (e) => {
+  handleSubmit = async (e) => {
     e.preventDefault();
+
+    console.log(this.state)
+
+    try {
+      await userService.login(this.state);
+
+      // LET <App> KNOW VALID LOGIN
+      this.props.handleSignupOrLogin();
+
+      // SUCCESSFUL - SHOW WEBSITE
+      this.props.history.push('/');
+    } catch (err) {
+      
+      // Use a modal or toast in your apps instead of alert
+      alert('Invalid Credentials!');
+    }
   }
 
   render() {
