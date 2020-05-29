@@ -41,5 +41,5 @@ For more depth, read on more
 
 ## Creator's
 
-Terrell D Lemons and Jay Reginaldo
-lemonsterrell43@gmail.com and jay@gmail.com
+Terrell D Lemons lemonsterrell43@gmail.com and
+Jay Reginaldo jay@gmail.com
