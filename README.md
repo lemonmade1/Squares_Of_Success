@@ -27,7 +27,7 @@ For more depth, read on more
 
 ## LINKS TO APPLICATIONS
 
-[Link to Live App](https://blooming-brushlands-23099.herokuapp.com/)
+[Link to Live App](https://squaresofsuccess.herokuapp.com/)
 
 [Trello Board](https://trello.com/b/7inbTRlr/bb-squares)
 
@@ -42,4 +42,4 @@ For more depth, read on more
 ## Creator's
 
 Terrell D Lemons lemonsterrell43@gmail.com and
-Jay Reginaldo jay@gmail.com
+Jay Reginaldo allmotorjay@gmail.com
