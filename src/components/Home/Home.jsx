@@ -1,6 +1,6 @@
 import React from 'react';
 
-import NavBar from '/Users/terrelllemons/Desktop/student/squares_of_success/src/components/NavBar/NavBar.jsx'
+import NavBar from '../NavBar/NavBar'
 
 import './Home.css';
 
