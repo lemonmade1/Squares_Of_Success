@@ -6,6 +6,11 @@
 
 #card_fan {
   margin: 0 auto;
+  height: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #card_fan img {
@@ -16,18 +21,18 @@
 }
 
 #card_fan:hover #card1 {
-  transform: rotate(16deg)
+  transform: rotate(10deg)
 }
 
 #card_fan:hover #card2 {
-  transform: rotate(8deg)
+  transform: rotate(5deg)
 }
 
 #card_fan:hover #card4 {
-  transform: rotate(-8deg)
+  transform: rotate(-5deg)
 }
 
 #card_fan:hover #card5 {
-  transform: rotate(-16deg)
+  transform: rotate(-10deg)
 }
 

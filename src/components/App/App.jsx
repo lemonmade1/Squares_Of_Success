@@ -1,33 +1,107 @@
-import React from 'react';
+import React, { Component } from "react"
 import { 
-  BrowserRouter as Router,  
-  Route,   
-} from 'react-router-dom';
+  Route, 
+  Switch, 
+  Redirect 
+} from "react-router-dom"
 
-import About from '../About/About';
-import Game from '../Game/Game';
-import Home from '../Home/Home';
-import NavBar from '../NavBar/NavBar';
-import LoginPage from '../LoginPage/LoginPage';
-import SignupPage from '../SignupPage/SignupPage';
+import About from '../../components/About/About'
+import Game from "../../components/Game/Game"
+import Home from "../../components/Home/Home"
 
-import './App.css';
+import SignupPage from "../../SignupLogin/SignupPage/SignupPage";
+import LoginPage from "../../SignupLogin/LoginPage/LoginPage"
+import userService from "../../utils/userService"
 
-function App() {
+import "./App.css"
 
-  return (
-    <Router>
-      <div className="App">
-        <NavBar />
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      user: userService.getUser(),
+    }
+  }
 
-        <Route path='/' component={Home} exact />
-        <Route path='/game' component={Game} />
-        <Route path='/about' component={About} />
-        <Route path='/login' component={LoginPage} />
-        <Route path='/signup' component={SignupPage} />
+  /*--- Lifecycle Methods ---*/
+
+  handleLogout = (props) => {
+    userService.logout(props)
+    this.setState({ user: null })
+  };
+
+  handleSignupOrLogin = () => {
+    this.setState({ user: userService.getUser() })
+  };
+
+  render() {
+   
+    return (
+      <div id="main-app">
+        <header className="header-footer">
+          S Q U A R E S &nbsp;&nbsp;&nbsp; O F &nbsp;&nbsp;&nbsp; S U C C E S S
+        </header>
+      
+        <Switch>
+          <Route
+            exact
+            path="/"
+            render={() => (
+              <Home
+                user={this.state.user}
+                handleLogout={this.handleLogout}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/about"
+            render={() => (
+              <About
+                user={this.state.user}
+                handleLogout={this.handleLogout}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/signup"
+            render={({ history }) => (
+              <SignupPage
+                history={history}
+                handleSignupOrLogin={this.handleSignupOrLogin}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/login"
+            render={({ history }) => (
+              <LoginPage
+                history={history}
+                handleSignupOrLogin={this.handleSignupOrLogin}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/game"
+            render={() =>
+              userService.getUser() ? (
+                <Game
+                  scores={this.state.scores}
+                  handleUpdateScores={this.handleUpdateScores}
+                />
+              ) : (
+                <Redirect to="/login" />
+              )
+            }
+          />
+        </Switch>      
+       
       </div>
-    </Router>
-  );
+    )
+  }
 }
 
-export default App;
+export default App
