@@ -1,4 +1,4 @@
-# S Q U A R E S  O F  S U C C E S S
+# S Q U A R E S - O F - S U C C E S S
 
 A wagering space for family and friends to enjoy and have fun. Football Squares is one of the most popular Super Bowl party games, and a great way to make your next football (or even Basketball) party even more enjoyable!
 
