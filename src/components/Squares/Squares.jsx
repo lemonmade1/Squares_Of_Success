@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import './Squares.css';
+import './Squares.css'
 
 class Squares extends Component {
-
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
 
     this.state = {
-      value: null,
-    };
+      value: null
+    }
   }
 
-  render() {
+  render () {
     return (
       <button
-        className="square"
+        className='square'
         onClick={() => {
           alert(`You clicked: Square ${this.props.value}`)
           this.setState({ value: 'X' })
@@ -23,7 +22,7 @@ class Squares extends Component {
       >
         {this.state.value}
       </button>
-    );
+    )
   }
 }
 
@@ -38,4 +37,4 @@ class Squares extends Component {
 //   );
 // }
 
-export default Squares;
+export default Squares

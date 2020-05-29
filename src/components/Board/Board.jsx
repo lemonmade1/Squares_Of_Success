@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import Squares from '../Squares/Squares.jsx';
+import Squares from '../Squares/Squares.jsx'
 
-import './Board.css';
+import './Board.css'
 
 class Board extends Component {
-
-  renderSquare(i) {
+  renderSquare (i) {
     return (
       <Squares
         value={this.props.squares[i]}
         onClick={() => this.props.onClick(i)}
       />
-    );
+    )
   }
 
-  render() {
+  render () {
     return (
       <div>
         <div>
           {/* Table Headers here */}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(1)}
           {this.renderSquare(2)}
           {this.renderSquare(3)}
@@ -33,7 +32,7 @@ class Board extends Component {
           {this.renderSquare(9)}
           {this.renderSquare(10)}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(11)}
           {this.renderSquare(12)}
           {this.renderSquare(13)}
@@ -45,7 +44,7 @@ class Board extends Component {
           {this.renderSquare(19)}
           {this.renderSquare(20)}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(21)}
           {this.renderSquare(22)}
           {this.renderSquare(23)}
@@ -57,7 +56,7 @@ class Board extends Component {
           {this.renderSquare(29)}
           {this.renderSquare(30)}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(31)}
           {this.renderSquare(32)}
           {this.renderSquare(33)}
@@ -69,7 +68,7 @@ class Board extends Component {
           {this.renderSquare(39)}
           {this.renderSquare(40)}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(41)}
           {this.renderSquare(42)}
           {this.renderSquare(43)}
@@ -81,7 +80,7 @@ class Board extends Component {
           {this.renderSquare(49)}
           {this.renderSquare(50)}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(51)}
           {this.renderSquare(52)}
           {this.renderSquare(53)}
@@ -93,7 +92,7 @@ class Board extends Component {
           {this.renderSquare(59)}
           {this.renderSquare(60)}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(61)}
           {this.renderSquare(62)}
           {this.renderSquare(63)}
@@ -105,7 +104,7 @@ class Board extends Component {
           {this.renderSquare(69)}
           {this.renderSquare(70)}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(71)}
           {this.renderSquare(72)}
           {this.renderSquare(73)}
@@ -117,7 +116,7 @@ class Board extends Component {
           {this.renderSquare(79)}
           {this.renderSquare(80)}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(81)}
           {this.renderSquare(82)}
           {this.renderSquare(83)}
@@ -129,7 +128,7 @@ class Board extends Component {
           {this.renderSquare(89)}
           {this.renderSquare(90)}
         </div>
-        <div className="board-row">
+        <div className='board-row'>
           {this.renderSquare(91)}
           {this.renderSquare(92)}
           {this.renderSquare(93)}
@@ -142,8 +141,8 @@ class Board extends Component {
           {this.renderSquare(100)}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Board;
+export default Board

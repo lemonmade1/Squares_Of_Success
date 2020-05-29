@@ -1,34 +1,36 @@
-function setToken(token) {
+const storage = localStorage
+const A2B = atob
+
+function setToken (token) {
   if (token) {
-    localStorage.setItem('token', token);
+    storage.setItem('token', token)
   } else {
-    localStorage.removeItem('token');
-  } 
+    storage.removeItem('token')
+  }
 }
 
-function getToken() {
-  let token = localStorage.getItem('token');
+function getToken () {
+  let token = storage.getItem('token')
   if (token) {
-
     // IF EXPIRED, REMOVE
-    const payload = JSON.parse(atob(token.split('.')[1]));
-    
+    const payload = JSON.parse(A2B(token.split('.')[1]))
+
     // JWT'S EXPRESSED IN SECONDS, NOT MILLI
     if (payload.exp < Date.now() / 1000) {
-      localStorage.removeItem('token');
-      token = null;
+      storage.removeItem('token')
+      token = null
     }
   }
-  return token;
+  return token
 }
 
 function getUserFromToken () {
-  const token = getToken();
-  return token ? JSON.parse(atob(token.split('.')[1])).user : null;
+  const token = getToken()
+  return token ? JSON.parse(A2B(token.split('.')[1])).user : null
 }
 
-function removeToken() {
-  localStorage.removeItem('token');
+function removeToken () {
+  storage.removeItem('token')
 }
 
 export default {
@@ -36,4 +38,4 @@ export default {
   getToken,
   removeToken,
   getUserFromToken
-};
+}
