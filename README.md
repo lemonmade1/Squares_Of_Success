@@ -1,36 +1,25 @@
-# ☐ App Title: Contains a description of what the app does and optional background info
+# Squares Of Success 
 
-## ☐ Screenshot(s): A screenshot of your app's landing page and any other screenshots of interest
+![wagering space for family and friends.](https://imgur.com/mz32cro.png)
 
-## ☐ Technologies Used: List of the technologies used
+## Technologies Used: 
+* Mongo DB
+* Express
+* REACT 
+* Node js
+* (MERN Stack SPA) 
+* HTML5/CSS3/Javascript
+* Heroku
 
-## ☐ Getting Started: That Includes
+[Link to live app](https://blooming-brushlands-23099.herokuapp.com/)
 
-A link to the deployed app (Heroku)
-A link to the Trello board used for the project's planning that includes user stories, wireframes & an ERD.
-☐ Next Steps: Planned future enhancements (icebox items).
+[Trello Board](https://trello.com/b/7inbTRlr/bb-squares)
+wagering space for family and friends.
 
-Technical Requirements
+![ERD](https://trello-attachments.s3.amazonaws.com/5ec995ad326ae70a54c505e3/5eccc8c9393cd1845d8e3938/b62222c3186df73de0edbcd0760a7d36/ERD2.png)
 
-## ☐ A working full-stack, single-page application hosted on Heroku
+![wireframe](https://trello-attachments.s3.amazonaws.com/5eccbcda0d3d874a0615d598/828x608/aa079254690e5fd439349e4ab5db8a5a/SQUARES.png) 
+ 
+###Next Steps: Planned future enhancements (icebox items).
 
-## ☐ Incorporate the technologies of the MERN-stack
-
-MongoDB/Mongoose
-Express
-React
-Node
-
-## ☐ Have a well-styled interactive front-end
-
-## ☐ Communicates with the Express backend via AJAX
-
-## ☐ Implement token-based authentication. Including the ability of a user to sign-up, log in & log out
-
-## ☐ Implement authorization by restricting CUD data functionality to authenticated users. Also, navigation should respond to the login status of the user
-
-## ☐ Have a well-scoped feature-set. Full-CRUD data operations are not required if one or more of the following are included
-
-Consume data from a third-party API.
-Implement additional functionality if the user is an admin.
-Utilize multi-user, real-time communications (beware that this is difficult and time consuming - please seek instructor approval)
+*Payment intergration
