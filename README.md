@@ -20,6 +20,6 @@ a wagering space for family and friends.
 
 ![wireframe](https://trello-attachments.s3.amazonaws.com/5eccbcda0d3d874a0615d598/828x608/aa079254690e5fd439349e4ab5db8a5a/SQUARES.png) 
  
-##Next Steps: Planned future enhancements (icebox items).
+## Next Steps: Planned future enhancements (icebox items).
 
 * Payment intergration
