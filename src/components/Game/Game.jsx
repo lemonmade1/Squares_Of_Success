@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Board from '../Board/Board';
 
+
 import './Game.css';
 
 function boardComplete(squares) {
@@ -106,7 +107,6 @@ class Game extends Component {
 
     return (
       <div className="container">
-
         <div className="game">
           <div className="game-board">
             <Board
