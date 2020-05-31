@@ -1,14 +1,12 @@
 import React from 'react'
 
-import NavBar from '../NavBar/NavBar'
+// import NavBar from '../NavBar/NavBar'
 
 import './Home.css'
 
 const Home = (props) => {
   return (
     <div className='Home-App'>
-      <NavBar user={props.user} handleLogout={props.handleLogout} />
-
       <div id='card_fan'>
         <img id='card1' src='./images/pix1.png' alt='Card 1' />
         <img id='card2' src='./images/pix1.png' alt='Card 2' />
