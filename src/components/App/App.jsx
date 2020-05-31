@@ -17,23 +17,6 @@ import NavBar from "../NavBar/NavBar";
 import Main from "../Main/Main";
 
 class App extends Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     user: userService.getUser(),
-  //   }
-  // }
-
-  /*--- Lifecycle Methods ---*/
-
-  // handleLogout = (props) => {
-  //   userService.logout(props)
-  //   this.setState({ user: null })
-  // };
-
-  // handleSignupOrLogin = () => {
-  //   this.setState({ user: userService.getUser() })
-  // };
 
   state = {
     user: userService.getUser(),

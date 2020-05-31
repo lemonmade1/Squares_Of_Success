@@ -1,12 +1,33 @@
 /* ||||||||||||| BOARD ||||||||||||| */
 
-
-
-.board-row:after {
-  clear: both;
-  content: "";
-  display: table;
+.boardGrid {
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: repeat(10, 1fr);
 }
+
+.red {
+  background-color: red;
+  text: white;
+}
+
+.blue {
+  background-color: blue;
+  text: white;
+}
+
+.squareHeaderGridX {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.squareHeaderGridY {
+  display: grid;
+  position: absolute;
+  left: 5em;
+  top: 13em;
+  grid-template-rows: repeat(10, 1fr);
+}
+
 
 .status {
   margin-bottom: 10px;
