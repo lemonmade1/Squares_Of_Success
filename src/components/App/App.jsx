@@ -1,22 +1,20 @@
-import React, { Component } from "react"
-import { 
-  Route, 
-  Switch, 
-  Redirect 
-} from "react-router-dom"
+import React, { Component } from "react";
+import { Route, Switch, Redirect } from "react-router-dom";
 
 // import About from '../../components/About/About'
 // import Game from "../../components/Game/Game"
 // import Home from "../../components/Home/Home"
 
-import Header from '../Header/Header'
+import Header from "../Header/Header";
 
 // import SignupPage from "../../SignupLogin/SignupPage/SignupPage";
 // import LoginPage from "../../SignupLogin/LoginPage/LoginPage"
-// import userService from "../../utils/userService"
+import userService from "../../utils/userService";
 
-import "./App.css"
-import NavBar from "../NavBar/NavBar"
+import "./App.css";
+import NavBar from "../NavBar/NavBar";
+
+import Main from "../Main/Main";
 
 class App extends Component {
   // constructor() {
@@ -37,8 +35,20 @@ class App extends Component {
   //   this.setState({ user: userService.getUser() })
   // };
 
+  state = {
+    user: userService.getUser(),
+  };
+
+  handleLogout = (props) => {
+    userService.logout(props);
+    this.setState({ user: null });
+  };
+
+  handleSignupOrLogin = () => {
+    this.setState({ user: userService.getUser() });
+  };
+
   render() {
-   
     return (
       <div id="main-app">
         {/* <header className="header-footer">
@@ -104,11 +114,24 @@ class App extends Component {
         </Switch>      
         </header> */}
 
-        <Header />
-        <NavBar />
+        <Header
+          handleSignupOrLogin={this.handleSignupOrLogin}
+          handleLogout={this.handleLogout}
+          user={this.state.user}
+        />
+        <NavBar
+          handleSignupOrLogin={this.handleSignupOrLogin}
+          handleLogout={this.handleLogout}
+          user={this.state.user}
+        />
+        <Main
+          handleSignupOrLogin={this.handleSignupOrLogin}
+          handleLogout={this.handleLogout}
+          user={this.state.user}
+        />
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;
