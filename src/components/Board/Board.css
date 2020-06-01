@@ -25,12 +25,17 @@
 
 .squareHeaderGridY {
   color: rgb(175, 75, 43);
+  text-shadow: 1px 1px 1px black;
   font-weight: bold;
   display: grid;
   grid-template-rows: repeat(10, 1fr);
   position: absolute;
-  left: 5em;
-  top: 13em;  
+  left: 1em;
+  top: 255px;
+  height: 400px;
+  width: 2em;
+  align-items: center;
+  justify-items: center; 
 }
 
 #main-app > div.container > div > div > div > div.boardGrid > button {

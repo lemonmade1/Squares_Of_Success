@@ -18,6 +18,11 @@ dl#gallery dt img {
   margin: 2.2em;
 }
 
+.classWhite {
+  color: white;
+  text-align: center;
+}
+
 dl#gallery dd { 
   position: absolute;
   top: 2.2em;
@@ -29,6 +34,23 @@ dl#gallery dd {
   color: black;
   transition: .85s opacity linear;
 }
+
+.classBg {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 6em;
+  height: 190px;
+  width: 100%;
+  margin: auto;
+  background: #ffffff4f;
+  text-shadow: 1px 1px 1px black;
+}
+
+
 
 dl#gallery dd img {
   display: block;
