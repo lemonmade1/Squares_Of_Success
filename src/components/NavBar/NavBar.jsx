@@ -47,7 +47,7 @@ const NavBar = props => {
       <Link to='/signup' className='NavBar-link'>
         SIGN UP
       </Link>
-      
+
     </div>
   )
 
