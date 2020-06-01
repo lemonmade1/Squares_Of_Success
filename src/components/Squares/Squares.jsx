@@ -26,12 +26,9 @@ import './Squares.css'
 //   }
 // }
 
-const Squares = (props) => {
+const Squares = props => {
   return (
-    <button
-      className={props.className}
-      onClick={props.onClick}
-    >
+    <button className={props.className} onClick={props.onClick}>
       {props.value}
     </button>
   )
