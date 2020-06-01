@@ -48,7 +48,7 @@ class SignupForm extends Component {
   render() {
     return (
       <div>
-        <header className="header-footer">Sign Up</header>
+        <header className="head">SIGN UP</header>
         <form className="form-horizontal" onSubmit={this.handleSubmit}>
           <div className="form-group">
             <div className="col-sm-12">
@@ -104,10 +104,10 @@ class SignupForm extends Component {
                 className="btn btn-default"
                 disabled={this.isFormInvalid()}
               >
-                Sign Up
+                SIGN UP
               </button>
               &nbsp;&nbsp;
-              <Link to="/">Cancel</Link>
+              <Link to="/">CANCEL</Link>
             </div>
           </div>
         </form>
