@@ -36,7 +36,7 @@ const NavBar = props => {
       <p className='NavBar-Welcome'>Welcome, {props.user.name}</p>
     </div>
   ) : (
-    <div>
+    <div className='NavClass'>
 
       <Link to='/login' className='NavBar-link'>
         LOG IN

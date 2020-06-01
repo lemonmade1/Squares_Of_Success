@@ -8,27 +8,53 @@
 
 .red {
   background-color: red;
-  text: white;
+  color: white;
 }
 
 .blue {
   background-color: blue;
-  text: white;
+  color: white;
 }
 
 .squareHeaderGridX {
+  color: rgb(175, 75, 43);
+  font-weight: bold;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
 }
+
 .squareHeaderGridY {
+  color: rgb(175, 75, 43);
+  font-weight: bold;
   display: grid;
+  grid-template-rows: repeat(10, 1fr);
   position: absolute;
   left: 5em;
-  top: 13em;
-  grid-template-rows: repeat(10, 1fr);
+  top: 13em;  
 }
 
+#main-app > div.container > div > div > div > div.boardGrid > button {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
 
 .status {
   margin-bottom: 10px;
+}
+
+div.cartDiv {
+  position: absolute;
+  bottom: 1em;
+  color: rgb(175, 75, 43);
+  text-shadow: 1px 1px 1px black;
+  font-size: 18px;
+}
+
+#main-app > div.container > div > div > div > div > p {
+  color: rgb(175, 75, 43);
+}
+
+#main-app > div.container > div > div > div > h1 {
+  text-shadow: 0px 0px 19px white;
 }

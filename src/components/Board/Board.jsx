@@ -1,6 +1,6 @@
 import React, { Component, useState, useEffect } from 'react'
 
-import Squares from '../Squares/Squares'
+// import Squares from '../Squares/Squares'
 import {
   SquareHeaderX,
   SquareHeaderY
@@ -37,10 +37,13 @@ const Board = () => {
         removeFromCart={removeFromCart}
         squaresInCart={squaresInCart}
       />
-      <CartItems
-        squaresInCart={squaresInCart}
-        setSquaresInCart={setSquaresInCart}
-      />
+      <div className='cartDiv'>
+        <CartItems
+          squaresInCart={squaresInCart}
+          setSquaresInCart={setSquaresInCart}
+        />
+      </div>
+
     </div>
   )
 }
