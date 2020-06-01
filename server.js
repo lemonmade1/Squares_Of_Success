@@ -3,18 +3,18 @@ const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
 
-const bodyParser = require('body-parser')
-const cors = require('cors')
+// const bodyParser = require('body-parser')
+// const cors = require('cors')
 
 const data = require('./src/utils/data')
 
 const app = express()
 
-app.use(bodyParser.json())
-  .use(cors())
-  .use(bodyParser.urlencoded({
-    usenewUrlParser: true
-  }))
+// app.use(bodyParser.json())
+//   .use(cors())
+//   .use(bodyParser.urlencoded({
+//     usenewUrlParser: true
+//   }))
 
 require('dotenv').config()
 require('./config/database')
@@ -32,19 +32,6 @@ app.get('/api/squares', (req, res) => {
   return res.json(data.squares)
 })
 
-let squares = [], id = null;
-  let cart = JSON.parse(req.body.cart);
-  if (!cart) return res.json(squares)
-  for (var i = 0; i < data.squares.length; i++) {
-    id = data.squares[i].id.toString();
-    if (cart.hasOwnProperty(id)) {
-    data.squares[i].qty = cart[id]
-    squares.push(data.squares[i]);
-    }
-  }
-  return res.json(squares);
-})
-
 app.use(require('./config/auth'))
 
 app.get('/*', (req, res) => {
@@ -58,5 +45,5 @@ const port = process.env.PORT || 3001
 console.log(port)
 
 app.listen(port, () => {
-  console.log(`Express app running on port ${port}`)
+  console.log(`Express app running on http://localhost:${port}`)
 })

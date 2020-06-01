@@ -28,7 +28,7 @@ async function login (req, res) {
     }
 
     // IF (error), TAKE UNDERSCORE OFF (_err, ...)
-    user.comparePassword(req.body.pw, (_err, isMatch) => {
+    user.comparePassword(req.body.pw, function (err, isMatch) {
       if (isMatch) {
         const token = createJWT(user)
         res.json({ token })
@@ -43,7 +43,7 @@ async function login (req, res) {
 
 /* ----- Helper Functions ----- */
 
-const createJWT = (user) => {
+function createJWT (user) {
   return jwt.sign(
     { user }, // DATA PAYLOAD
     SECRET,
