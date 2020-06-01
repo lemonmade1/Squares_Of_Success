@@ -85,17 +85,17 @@ class Game extends Component {
     const current = history[this.state.stepNum];
     const boardFull = boardComplete(current.squares);
 
-    const moves = history.map((step, move) => {
-      const desc = move ? ` Square picked # ${move}` : `Back to Blank Board`;
+    // const moves = history.map((step, move) => {
+    //   const desc = move ? ` Square picked # ${move}` : `Back to Blank Board`;
 
-      return (
-        <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>
-            {desc}
-          </button>
-        </li>
-      );
-    });
+    //   return (
+    //     <li key={move}>
+    //       <button onClick={() => this.jumpTo(move)}>
+    //         {desc}
+    //       </button>
+    //     </li>
+    //   );
+    // });
 
     let status;
     if (boardFull) {
@@ -113,10 +113,10 @@ class Game extends Component {
               squares={current.squares}
               onClick={(i) => this.handleClick(i)}
             />
-            <div className="game-info">
+            {/* <div className="game-info">
               <div>{status}</div>
               <ol>{moves}</ol>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -5,8 +5,8 @@
 }
 
 #card_fan {
-  margin: 0 auto;
-  height: 800px;
+  margin: 4em auto 0;
+  height: 350px;
   width: 100%;
   display: flex;
   justify-content: center;
