@@ -38,6 +38,8 @@ For more depth, read on more
 ## Next Steps: Planned future enhancements (Icebox Items)
 
 * Payment intergration
+* Manager be able to send payouts
+* Select payout/periods
 
 ## Creator's
 
