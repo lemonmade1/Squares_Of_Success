@@ -28,7 +28,7 @@ async function login (req, res) {
     }
 
     // IF (error), TAKE UNDERSCORE OFF (_err, ...)
-    user.comparePassword(req.body.pw, function (err, isMatch) {
+    user.comparePassword(req.body.pw, function (_err, isMatch) {
       if (isMatch) {
         const token = createJWT(user)
         res.json({ token })
