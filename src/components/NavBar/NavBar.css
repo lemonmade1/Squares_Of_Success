@@ -1,3 +1,22 @@
-.navbar {
-  width: 220px;
+.NavBar {
+  width: 100%;
+  color: white
+}
+
+.NavClass {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.NavBar-Welcome {
+  text-align: center;
+    font-size: 22px;
+    padding: 10px;
+}
+
+a {
+  color: rgb(175, 75, 43);
+  text-decoration: none;
 }

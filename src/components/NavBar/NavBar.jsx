@@ -6,31 +6,34 @@ import './NavBar.css'
 const NavBar = props => {
   const nav = props.user ? (
     <div>
-      <Link to='/about' className='NavBar-link'>
-        ABOUT
-      </Link>
+      <div className='NavClass'>
 
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <Link to='/about' className='NavBar-link'>
+          ABOUT
+        </Link>
 
-      <Link to='/game' className='NavBar-link'>
-        SQUARES
-      </Link>
+        &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        <Link to='/game' className='NavBar-link'>
+          SQUARES
+        </Link>
 
-      {/* <Link to='/picks' className='NavBar-link'>
+        &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+
+        {/* <Link to='/picks' className='NavBar-link'>
         PICKS
       </Link>
 
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; */}
 
-      <Link to='' className='NavBar-link' onClick={props.handleLogout}>
-        LOG OUT
-      </Link>
+        <Link to='' className='NavBar-link' onClick={props.handleLogout}>
+          LOG OUT
+        </Link>
 
-      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+        {/* &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; */}
+      </div>
 
-      <span className='NavBar-welcome'>Welcome, {props.user.name}</span>
+      <p className='NavBar-Welcome'>Welcome, {props.user.name}</p>
     </div>
   ) : (
     <div>
@@ -44,6 +47,7 @@ const NavBar = props => {
       <Link to='/signup' className='NavBar-link'>
         SIGN UP
       </Link>
+      
     </div>
   )
 
