@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 const shuffle = (array) => {
   let currentIndex = array.length; let temporaryValue; let randomIndex
@@ -21,8 +21,10 @@ const shuffle = (array) => {
 export const SquareHeaderX = () => {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   const [randomNumbers, setRandomNumbers] = useState([])
-  const [shuffled, setShuffled] = useState(false)
-
+  const [
+    // shuffled,
+    setShuffled
+  ] = useState(false)
 
   // Change shuffle to random numbers to display
   useEffect(() => {
@@ -34,7 +36,7 @@ export const SquareHeaderX = () => {
   return (
     <div className='squareHeaderGridX'>
       {
-      randomNumbers.map((header, index) => (
+        randomNumbers.map((header, index) => (
           <div key={`topHeader-${index}`}>{header}</div>
         ))
       }
@@ -56,7 +58,7 @@ export const SquareHeaderY = () => {
   return (
     <div className='squareHeaderGridY'>
       {
-      randomNumbers.map((header, index) => (
+        randomNumbers.map((header, index) => (
           <div key={`header-${index}`}>{header}</div>
         ))
       }

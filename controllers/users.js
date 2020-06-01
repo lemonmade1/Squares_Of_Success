@@ -27,11 +27,14 @@ async function login (req, res) {
       }
     )
 
-    if (!user) {return res.status(401).json({
-      err: 'bad credentials'
-    });}
+    if (!user) {
+      return res.status(401).json({
+        err: 'bad credentials'
+      })
+    }
 
-    user.comparePassword(req.body.pw, function (err, isMatch) {
+    // IF (error), TAKE UNDERSCORE OFF (_err, ...)
+    user.comparePassword(req.body.pw, function (_err, isMatch) {
       if (isMatch) {
         const token = createJWT(user)
         res.json({ token })
@@ -44,7 +47,7 @@ async function login (req, res) {
   }
 }
 
-/*----- Helper Functions ----- */
+/* ----- Helper Functions ----- */
 
 function createJWT (user) {
   return jwt.sign(

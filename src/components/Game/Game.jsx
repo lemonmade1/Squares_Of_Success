@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Board from '../Board/Board';
 
-
 import './Game.css';
 
 function boardComplete(squares) {
@@ -58,7 +57,6 @@ class Game extends Component {
     }
 
     squares[i] = 'X';
-    // squares[i] = this.state.xIsNext ? 'X' : 'O';
 
     this.setState({
       history: history.concat([
@@ -85,18 +83,6 @@ class Game extends Component {
     const current = history[this.state.stepNum];
     const boardFull = boardComplete(current.squares);
 
-    // const moves = history.map((step, move) => {
-    //   const desc = move ? ` Square picked # ${move}` : `Back to Blank Board`;
-
-    //   return (
-    //     <li key={move}>
-    //       <button onClick={() => this.jumpTo(move)}>
-    //         {desc}
-    //       </button>
-    //     </li>
-    //   );
-    // });
-
     let status;
     if (boardFull) {
       status = `boardFull: ${boardFull}`;
@@ -113,10 +99,6 @@ class Game extends Component {
               squares={current.squares}
               onClick={(i) => this.handleClick(i)}
             />
-            {/* <div className="game-info">
-              <div>{status}</div>
-              <ol>{moves}</ol>
-            </div> */}
           </div>
         </div>
       </div>

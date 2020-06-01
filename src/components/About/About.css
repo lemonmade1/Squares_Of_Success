@@ -1,11 +1,15 @@
-#base {
-  background: #234;
-}
-
-
-
 dl#gallery {
   position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#gallery > dt:nth-child(1),
+#gallery > dt:nth-child(3),
+#gallery > dt:nth-child(5) {
+  width: 135px;
+  height: 135px;
 }
 
 dl#gallery dt img {
@@ -38,3 +42,41 @@ dl#gallery dt:active + dd {
  opacity: 1;
 }
 
+#gallery > dd:nth-child(2),
+#gallery > dd:nth-child(4),
+#gallery > dd:nth-child(6) {
+  width: 315px !important;
+  height: 315px !important;
+}
+
+#gallery > dd:nth-child(2) > div {
+  width: 315px;
+  height: 315px;
+}
+
+#gallery > dd:nth-child(2),
+#gallery > dd:nth-child(4),
+#gallery > dd:nth-child(6) {
+  width: 100%;
+  height: 100%;
+}
+
+#gallery > dd:nth-child(2) > div,
+#gallery > dd:nth-child(4) > div,
+#gallery > dd:nth-child(6) > div {
+  width: 440px !important;
+  height: 350px !important;
+  position: absolute !important;
+  top: 1em !important;
+  left: 0 !important;
+}
+
+#gallery > dd:nth-child(2), 
+#gallery > dd:nth-child(4), 
+#gallery > dd:nth-child(6) {
+  width: 440px !important;
+  height: 350px !important;
+  position: absolute !important;
+  top: 11em !important;
+  left: -1.5em !important;
+}

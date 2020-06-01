@@ -1,17 +1,17 @@
-import React, { Component, useState, useEffect } from 'react'
+import React, { useState } from 'react'
 
-// import Squares from '../Squares/Squares'
 import {
   SquareHeaderX,
   SquareHeaderY
 } from '../Squares/SquareHeader'
+
 import CartItems from './CartItems'
 import SquaresList from '../Squares/SquaresList'
 
 import './Board.css'
 
 const Board = () => {
-  const [squares, setSquares] = useState([])
+  // const [squares, setSquares] = useState([])
   const [squaresInCart, setSquaresInCart] = useState([])
   const addToClickSquares = (square) => {
     setSquaresInCart([
@@ -21,7 +21,7 @@ const Board = () => {
   }
 
   const removeFromCart = (square) => {
-    const cartItems = [...squaresInCart]
+    // const cartItems = [...squaresInCart]
     const filteredCart = squaresInCart.filter(cartItem => cartItem.id !== square.id)
     setSquaresInCart([
       ...filteredCart

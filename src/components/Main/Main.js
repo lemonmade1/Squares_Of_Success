@@ -1,13 +1,20 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import Home from "../Home/Home.jsx";
-import About from "../About/About.jsx";
+
+import { 
+  Switch, 
+  Route, 
+  Redirect 
+} from "react-router-dom";
+
+import Home       from "../Home/Home.jsx";
+import About      from "../About/About.jsx";
 import SignupPage from "../../SignupLogin/SignupPage/SignupPage";
-import LoginPage from "../../SignupLogin/LoginPage/LoginPage";
-import Game from "../Game/Game.jsx";
+import LoginPage  from "../../SignupLogin/LoginPage/LoginPage";
+import Game       from "../Game/Game.jsx";
 import userService from "../../utils/userService";
 
 class Main extends React.Component {
+
   state = { scores: 0 };
 
   render() {

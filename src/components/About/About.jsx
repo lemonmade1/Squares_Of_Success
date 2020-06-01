@@ -8,10 +8,10 @@ const About = () => {
     <div className='About-App'>
       <div id='base'>
         <dl id='gallery'>
-          <dt>
-            <img src='./images/minifruit/basketball.png' alt='Step 1 Thumbnail' />
+          <dt className='defTitle'>
+            <img src='./images/sports/basketball.png' alt='Step 1 Thumbnail' />
           </dt>
-          <dd>
+          <dd className='def-def'>
             <ReactPlayer
               playing
               muted
@@ -21,10 +21,10 @@ const About = () => {
               Step 1
           </dd>
 
-          <dt>
-            <img src='./images/minifruit/football.png' alt='Step 2 Thumbnail' />
+          <dt className='defTitle'>
+            <img src='./images/sports/football.png' alt='Step 2 Thumbnail' />
           </dt>
-          <dd>
+          <dd className='def-def'>
             <ReactPlayer
               playing
               muted
@@ -34,15 +34,14 @@ const About = () => {
           Step 2
           </dd>
 
-          <dt>
-            <img src='./images/miniFruit/baseball.png' alt='Step 3 Thumbnail' />
+          <dt className='defTitle'>
+            <img src='./images/sports/baseball.png' alt='Step 3 Thumbnail' />
           </dt>
-          <dd>
+          <dd className='def-def'>
             <ReactPlayer
               playing
               muted
               url='https://vimeo.com/144990585'
-              
               alt='Step 3'
             />
           Step 3

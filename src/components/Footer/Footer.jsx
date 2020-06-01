@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 import './Footer.css'
 
 class Footer extends Component {
-  render() {
+  render () {
     return (
-      <div id="Footer-App">
-        Lemonmade
+      <div id='Footer-App'>
+        <small>Lemon'made and AllMotorJay</small>
       </div>
     )
   }
 }
 
-export default Footer;
+export default Footer
