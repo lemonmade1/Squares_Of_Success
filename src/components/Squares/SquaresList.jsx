@@ -1,14 +1,18 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import Squares from './Squares'
-import squaresData from '../../utils/data'
+import jay from '../../utils/data'
 
-const SquaresList = ({removeFromCart, addToClickSquares, squaresInCart}) => {
+const SquaresList = ({
+  removeFromCart,
+  addToClickSquares,
+  squaresInCart
+}) => {
   const [squares, setSquares] = useState([])
 
   useEffect(() => {
-    setSquares(squaresData.squares)
+    setSquares(jay.squares)
   }, [squares])
-  
+
   return (
     <div className='boardGrid'>
       {squares.length > 0 && squares.map((square, index) => {
@@ -29,7 +33,7 @@ const SquaresList = ({removeFromCart, addToClickSquares, squaresInCart}) => {
         )
       }
       )}
-  </div>
+    </div>
   )
 }
 export default SquaresList

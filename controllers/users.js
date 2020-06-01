@@ -1,61 +1,60 @@
-const User = require('../models/user');
-const jwt = require('jsonwebtoken');
+const User = require('../models/user')
+const jwt = require('jsonwebtoken')
 
-const SECRET = process.env.SECRET;
+const SECRET = process.env.SECRET
 
-async function signup(req, res) {
-  const user = new User(req.body);
+async function signup (req, res) {
+  const user = new User(req.body)
   try {
-    await user.save();
+    await user.save()
 
     const token = createJWT(user)
 
-    res.json({ token });
+    res.json({ token })
   } catch (err) {
-
     console.log(err)
 
     // POSSIBLY EMAIL ERROR
-    res.status(400).json(err);
+    res.status(400).json(err)
   }
 }
 
-async function login(req, res) {
+async function login (req, res) {
   try {
     const user = await User.findOne(
       {
         email: req.body.email
       }
-    );
+    )
 
-    if (!user) return res.status(401).json({
+    if (!user) {return res.status(401).json({
       err: 'bad credentials'
-    });
+    });}
 
-    user.comparePassword(req.body.pw, function(err, isMatch) {
+    user.comparePassword(req.body.pw, function (err, isMatch) {
       if (isMatch) {
-        const token = createJWT(user);
-        res.json({ token });
+        const token = createJWT(user)
+        res.json({ token })
       } else {
-        return res.status(401).json({ err: 'bad credentials' });
+        return res.status(401).json({ err: 'bad credentials' })
       }
-    });
+    })
   } catch (err) {
-    return res.status(401).json(err);
+    return res.status(401).json(err)
   }
 }
 
-/*----- Helper Functions -----*/
+/*----- Helper Functions ----- */
 
-function createJWT(user) {
+function createJWT (user) {
   return jwt.sign(
     { user }, // DATA PAYLOAD
     SECRET,
     { expiresIn: '24h' }
-  );
+  )
 }
 
 module.exports = {
   signup,
-  login,
-};
+  login
+}

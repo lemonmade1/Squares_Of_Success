@@ -5,7 +5,6 @@ const CartItems = ({ squaresInCart }) => {
 
   const getTotalCartPrice = () => squaresInCart.map(square => square.price).reduce((a, b) => a + b)
 
-
   // Below in setSquares pass it data returned from database
   useEffect(() => {
     const cartPrice = squaresInCart.length ? getTotalCartPrice() : 0
@@ -16,12 +15,14 @@ const CartItems = ({ squaresInCart }) => {
     <>
       {
         squaresInCart.map((cartItem, index) => (
-        <div key={`squareKey-${index}`}>
-        Cart Item Number {cartItem.id}
-        </div>
-      ))}
+          <div key={`squareKey-${index}`}>
+            <p>You picked Square {cartItem.id} / <span>Price: ${cartItem.price}</span></p>
+          </div>
+        ))
+      }
       <h1> Total: ${totalCartPrice}</h1>
     </>
-  ) 
+  )
 }
+
 export default CartItems

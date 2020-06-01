@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './NavBar.css'
 
-const NavBar = (props) => {
+const NavBar = props => {
   const nav = props.user ? (
     <div>
       <Link to='/about' className='NavBar-link'>
@@ -18,6 +18,12 @@ const NavBar = (props) => {
 
       &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 
+      {/* <Link to='/picks' className='NavBar-link'>
+        PICKS
+      </Link>
+
+      &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; */}
+
       <Link to='' className='NavBar-link' onClick={props.handleLogout}>
         LOG OUT
       </Link>
@@ -28,6 +34,7 @@ const NavBar = (props) => {
     </div>
   ) : (
     <div>
+
       <Link to='/login' className='NavBar-link'>
         LOG IN
       </Link>

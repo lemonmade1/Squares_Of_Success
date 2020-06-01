@@ -1,4 +1,8 @@
 #main-app {
   width: 100%;
   height: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('https://i.pinimg.com/originals/5a/20/9e/5a209e0e972c3160e067524c7ba062b5.jpg');
 }

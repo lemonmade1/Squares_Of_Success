@@ -1,16 +1,10 @@
-import React, { Component, useState, useEffect } from 'react'
+import React from 'react'
 
+import CartItems from '../Board/CartItems'
 import Squares from '../Squares/Squares'
-import {
-  SquareHeaderX,
-  SquareHeaderY
-} from '../Squares/SquareHeader'
-import CartItems from './CartItems'
-import SquaresList from '../Squares/SquaresList'
 
-import './Board.css'
+const Picks = () => {
 
-const Board = () => {
   const [squares, setSquares] = useState([])
   const [squaresInCart, setSquaresInCart] = useState([])
   const addToClickSquares = (square) => {
@@ -29,19 +23,14 @@ const Board = () => {
   }
 
   return (
-    <div>
-      <SquareHeaderX />
-      <SquareHeaderY />
-      <SquaresList
-        addToClickSquares={addToClickSquares}
-        removeFromCart={removeFromCart}
-        squaresInCart={squaresInCart}
-      />
+    <>
+      <h1>PICKS</h1>
       <CartItems
         squaresInCart={squaresInCart}
         setSquaresInCart={setSquaresInCart}
       />
-    </div>
+    </>
   )
 }
-export default Board
+
+export default Picks
