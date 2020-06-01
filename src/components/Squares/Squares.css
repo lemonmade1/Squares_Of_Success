@@ -18,3 +18,32 @@
 .kbd-navigation .square:focus {
   background: #ddd;
 }
+
+.squareHeaderGridX {
+  color: rgb(175, 75, 43);
+  font-weight: bold;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  position: absolute;
+  left: 3em;
+  top: 221px;
+  height: 2em;
+  width: 400px;
+  align-items: center;
+  justify-items: center;
+}
+
+.squareHeaderGridY {
+  color: rgb(175, 75, 43);
+  text-shadow: 1px 1px 1px black;
+  font-weight: bold;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  position: absolute;
+  left: 1em;
+  top: 255px;
+  height: 400px;
+  width: 2em;
+  align-items: center;
+  justify-items: center; 
+}

@@ -15,13 +15,12 @@ const CartItems = ({ squaresInCart }) => {
   return (
     <>
       {squaresInCart.map((cartItem, index) => (
-        <div
-          key={`squareKey-${index}`}
-        >
+        <div key={`squareKey-${index}`}>
           <p>
             You picked Square {cartItem.id} /{' '}
             <span>Price: ${cartItem.price}</span>
           </p>
+          <br />
         </div>
       ))}
       <h1> Total: ${totalCartPrice}</h1>

@@ -3,7 +3,18 @@ const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
 
+const bodyParser = require('body-parser')
+const cors = require('cors')
+
+const data = require('./src/utils/data')
+
 const app = express()
+
+app.use(bodyParser.json())
+  .use(cors())
+  .use(bodyParser.urlencoded({
+    usenewUrlParser: true
+  }))
 
 require('dotenv').config()
 require('./config/database')
@@ -16,7 +27,23 @@ app.use(express.static(path.join(__dirname, 'build')))
 
 // API ROUTES
 app.use('/api/users', require('./routes/api/users'))
-// app.use('/api/scores', require('./routes/api/scores'));
+
+app.get('/api/squares', (req, res) => {
+  return res.json(data.squares)
+})
+
+let squares = [], id = null;
+  let cart = JSON.parse(req.body.cart);
+  if (!cart) return res.json(squares)
+  for (var i = 0; i < data.squares.length; i++) {
+    id = data.squares[i].id.toString();
+    if (cart.hasOwnProperty(id)) {
+    data.squares[i].qty = cart[id]
+    squares.push(data.squares[i]);
+    }
+  }
+  return res.json(squares);
+})
 
 app.use(require('./config/auth'))
 

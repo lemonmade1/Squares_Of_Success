@@ -20,19 +20,19 @@ const shuffle = (array) => {
 
 export const SquareHeaderX = () => {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-  const [randomNumbers, setRandomNumbers] = useState([])
-  const [
-    // shuffled,
-    setShuffled
-  ] = useState(false)
+
+  const [randomNumbers, setRandomNumbers] = useState(numbers)
+  const [shuffled, setShuffled] = useState(false)
 
   // Change shuffle to random numbers to display
   useEffect(() => {
-    console.log('show numbers ', process.env.SHOW_NUMBERS)
-    if (!process.env.SHOW_NUMBERS) return
+    // console.log('show numbers ', process.env.SHOW_NUMBERS)
+    // if (!process.env.SHOW_NUMBERS) return
+
+    if (shuffled) return
     setRandomNumbers(shuffle(numbers))
     setShuffled(true)
-  }, [])
+  }, [shuffled, randomNumbers])
   return (
     <div className='squareHeaderGridX'>
       {
@@ -46,6 +46,7 @@ export const SquareHeaderX = () => {
 
 export const SquareHeaderY = () => {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
   const [randomNumbers, setRandomNumbers] = useState(numbers)
   const [shuffled, setShuffled] = useState(false)
 
