@@ -5,7 +5,17 @@
   grid-template-rows: repeat(10, 1fr);
   grid-template-columns: repeat(10, 1fr);
   position: relative;
-  top: -24em;
+  bottom: 26em;
+}
+
+h2.homeAway { 
+  color: white;
+  text-align: center;
+}
+
+.away {
+  position: relative;
+  bottom: 425px;
 }
 
 .red {
