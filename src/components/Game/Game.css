@@ -12,6 +12,11 @@
 .game {
   display: flex;
   flex-direction: row;
+  height: 100%;
+}
+
+#main-app > div.container > div > div > div {
+  height: 100%;
 }
 
 .game-info {

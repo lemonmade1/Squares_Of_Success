@@ -48,6 +48,7 @@ table {
 * {
   box-sizing: border-box;
   font-family: menlo;
+  text-shadow: 1px 1px 1px black;
 }
 
 html, body {
