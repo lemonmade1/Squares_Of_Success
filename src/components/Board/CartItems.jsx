@@ -16,11 +16,11 @@ const CartItems = ({ squaresInCart }) => {
     <>
       {squaresInCart.map((cartItem, index) => (
         <div key={`squareKey-${index}`}>
-          <p>
-            You picked Square {cartItem.id} /{' '}
-            <span>Price: ${cartItem.price}</span>
+          <p className='cartItem'>
+            You picked Square {cartItem.id} {' '}
+            <span>for ${cartItem.price}</span>
           </p>
-          <br />
+    
         </div>
       ))}
       <h1> Total: ${totalCartPrice}</h1>

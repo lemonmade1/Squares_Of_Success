@@ -53,3 +53,11 @@ div.cartDiv {
 #main-app > div.container > div > div > div > h1 {
   text-shadow: 0px 0px 19px white;
 }
+
+.cartItem {
+  line-height: 25px;
+  background: #000000c7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
