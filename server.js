@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname, 'build')))
 
 // API ROUTES
 app.use('/api/users', require('./routes/api/users'))
-// app.use('/api/scores', require('./routes/api/scores'));
+app.use('/boards', require('./routes/boards'))
 
 app.use(require('./config/auth'))
 
