@@ -31,7 +31,7 @@ For more depth, read on more
 
 [Trello Board](https://trello.com/b/7inbTRlr/bb-squares)
 
-## Next Steps: Planned future enhancements (Icebox Items)
+## NEXT STEPS: Planned future enhancements (Icebox Items)
 
 * Payment intergration
 * Manager be able to send payouts
