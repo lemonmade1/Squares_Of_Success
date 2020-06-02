@@ -22,14 +22,14 @@ export const SquareHeaderX = () => {
   const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
   const [randomNumbers, setRandomNumbers] = useState([])
   const [
-    // shuffled,
+    shuffled,
     setShuffled
   ] = useState(false)
 
   // Change shuffle to random numbers to display
   useEffect(() => {
-    console.log('show numbers ', process.env.SHOW_NUMBERS)
-    if (!process.env.SHOW_NUMBERS) return
+    console.log(shuffled)
+    if (shuffled) return
     setRandomNumbers(shuffle(numbers))
     setShuffled(true)
   }, [])
