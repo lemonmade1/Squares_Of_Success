@@ -3,18 +3,9 @@ const path = require('path')
 const favicon = require('serve-favicon')
 const logger = require('morgan')
 
-// const bodyParser = require('body-parser')
-// const cors = require('cors')
-
 const data = require('./src/utils/data')
 
 const app = express()
-
-// app.use(bodyParser.json())
-//   .use(cors())
-//   .use(bodyParser.urlencoded({
-//     usenewUrlParser: true
-//   }))
 
 require('dotenv').config()
 require('./config/database')

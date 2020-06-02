@@ -20,7 +20,6 @@ const CartItems = ({ squaresInCart }) => {
             You picked Square {cartItem.id} {' '}
             <span>for ${cartItem.price}</span>
           </p>
-    
         </div>
       ))}
       <h1> Total: ${totalCartPrice}</h1>

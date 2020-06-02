@@ -3,10 +3,6 @@ const Board = require('../models/board')
 const index = (req, res) => {
   Board.find({}, (_err, board) => {
     res.json(board)
-    // res.js('board/index', {
-    //   user: req.user,
-    //   board
-    // })
   })
 }
 
@@ -16,9 +12,6 @@ const addSquares = (req, res) => {
     user: req.body.user,
     squareNum: req.body.id
   }
-  // Board.create(req.body, (err, square) => {
-  //   res.json(square)
-  // })
   try {
     console.log('req.body', req.body)
     const newBoard = new Board({ user: {}, squareNum: req.body.id })
@@ -31,13 +24,14 @@ const addSquares = (req, res) => {
 }
 
 //   // DELETE
-//   const delComment = (req, res) => {
-//     Squares.findByIdAndRemove(req.params.id, (_err, _data) => {
-//       res.redirect('/squares', 301, {
-//         user: req.user
-//       })
-//     })
-//   }
+const delComment = (req, res) => {
+  Squares.findByIdAndRemove(req.params.id, (_err, _data) => {
+    res.redirect('/squares', 301, {
+      user: req.user
+    })
+  })
+}
+
 const getAllSquares = (req, res) => {
   const squares = Board.find({}, (err, result) => {
     if (err) throw new Error(err)
@@ -51,6 +45,6 @@ const getAllSquares = (req, res) => {
 module.exports = {
   index,
   addSquares,
-  getAllSquares
-  // delComment
+  getAllSquares,
+  delComment
 }

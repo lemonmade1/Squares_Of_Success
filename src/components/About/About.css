@@ -94,6 +94,7 @@ dl#gallery dt:hover + dd {
   /* color: rgb(175, 75, 43); */
   display: flex;
   flex-flow: column;
+  border: 5px solid rgb(175, 75, 43);
 }
 
 #gallery > dd:nth-child(2), 

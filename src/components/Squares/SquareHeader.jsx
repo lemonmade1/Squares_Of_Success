@@ -26,9 +26,6 @@ export const SquareHeaderX = () => {
 
   // Change shuffle to random numbers to display
   useEffect(() => {
-    // console.log('show numbers ', process.env.SHOW_NUMBERS)
-    // if (!process.env.SHOW_NUMBERS) return
-
     if (shuffled) return
     setRandomNumbers(shuffle(numbers))
     setShuffled(true)

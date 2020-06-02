@@ -30,7 +30,7 @@ const Board = () => {
 
   return (
     <div>
-      <h2 className='homeAway'>Home Team</h2>
+      <h2 className='homeAway'>L.A. Lakers</h2>
       <SquareHeaderX />
       <SquareHeaderY />
       <SquaresList
@@ -38,7 +38,7 @@ const Board = () => {
         removeFromCart={removeFromCart}
         squaresInCart={squaresInCart}
       />
-      <h2 className='homeAway away'>Away Team</h2>
+      <h2 className='homeAway away'>L.A. Clippers</h2>
       <div className='cartDiv'>
         <CartItems
           squaresInCart={squaresInCart}

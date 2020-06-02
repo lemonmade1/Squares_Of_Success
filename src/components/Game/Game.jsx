@@ -25,9 +25,7 @@ function boardComplete(squares) {
     const a = lines[i];
 
     // NEED CONDITIONAL STATEMENT TO DECLARE WHEN BOARD IS FULL
-    // if (squares[a]) {
-    //   return "Board Full!";
-    // }
+   
   }
   return null;
 }
@@ -87,8 +85,7 @@ class Game extends Component {
     if (boardFull) {
       status = `boardFull: ${boardFull}`;
     } else {
-      // NEED TO PLACE PLAYER NAME HERE
-      // status = 'Next player: ' + (this.state.xIsNext ? `${name}` : `O`);
+     
     }
 
     return (

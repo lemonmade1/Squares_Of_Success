@@ -1,11 +1,5 @@
 import React, { Component } from "react";
 
-import { 
-  // Route, 
-  // Switch, 
-  // Redirect 
-} from "react-router-dom";
-
 import Header from "../Header/Header";
 import userService from "../../utils/userService";
 
