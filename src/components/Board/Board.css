@@ -59,3 +59,37 @@ div.cartDiv {
   border-radius: 5px;
   margin-bottom: 5px;
 }
+
+@media screen and (min-width: 900px) {
+  div.cartDiv {
+    position: relative;
+    top: -50em;
+    left: 17em;
+    width: 260px;
+  }
+
+  .boardGrid {
+    position: relative;
+    bottom: 26em;
+    left: -9em;
+  }
+
+  h2.homeAway {
+    position: relative;
+    left: -6em;
+  }
+
+  .squareHeaderGridX {
+    position: relative;
+    left: -9em;
+    top: -1em;
+  }
+
+  .squareHeaderGridY {
+    position: relative;
+    left: -11em;
+    top: -1em;
+  }
+
+}
+
